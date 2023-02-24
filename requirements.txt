@@ -9,6 +9,7 @@
 # --------------------
 pytube==12.1.2 # https://github.com/pytube/pytube
 SQLAlchemy==2.0.3 # https://github.com/sqlalchemy/sqlalchemy
+ffmpeg==1.4
 
 # Frontend
 # --------------------
