@@ -5,7 +5,7 @@ import uuid
 from datetime import datetime
 from typing import List, Optional
 
-from config import DATA_DIR, DEBUG
+from config import DATA_DIR, DEBUG, DB_DIR
 from sqlalchemy import ForeignKey, MetaData, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
@@ -87,7 +87,7 @@ class Segment(Base):
 
 # Database config
 # ----------------------
-DATABASE_URL = f"sqlite:///{DATA_DIR}/db.sqlite3"
+DATABASE_URL = f"sqlite:///{DB_DIR}/db.sqlite3"
 # DATABASE_URL = "sqlite+pysqlite:///:memory:"
 
 # Create database engine

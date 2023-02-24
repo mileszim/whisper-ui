@@ -10,6 +10,10 @@ PROJECT_DIR = APP_DIR.parent.absolute()
 DATA_DIR = PROJECT_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
+# Create a DB directory for using distributed SQLite DB
+DB_DIR = DATA_DIR / "db"
+DB_DIR.mkdir(exist_ok=True)
+
 # Create a data directory
 MEDIA_DIR = DATA_DIR / "media"
 MEDIA_DIR.mkdir(exist_ok=True)
