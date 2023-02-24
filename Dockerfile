@@ -14,10 +14,11 @@ COPY ./requirements.txt /requirements.txt
 
 # Pip install the dependencies
 RUN pip install --upgrade pip
-# For CPU only, you can use pip install git+https://github.com/MiscellaneousStuff/whisper.git
+# For CPU only, you can use pip install git+https://github.com/mileszim/whisper.git
 # in place of openai-whisper.
 # Also, --extra-index-url https://download.pytorch.org/whl/cpu might be needed if you are using a CPU only machine
-RUN pip install --no-cache-dir -r /requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir -r /requirements.txt
+RUN pip install --upgrade --no-deps --force-reinstall git+https://github.com/mileszim/whisper.git --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Set the working directory to /app
 WORKDIR /app
